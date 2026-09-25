@@ -1,3 +1,3 @@
 .terraform
 *.tfstate*
-tmp/
+tmp/\n# Local environment secrets and Terraform inputs/state\n.env\n.env.*\n!.env.example\n*.tfvars\n*.tfvars.json\n!*.tfvars.example\n**/.terraform/\n*.tfstate\n*.tfstate.*\ncrash.log\ncrash.*.log\n
