@@ -1,1 +1,14 @@
-version: 2\nupdates:\n  - package-ecosystem: terraform\n    directory: "/4g_RDS"\n    schedule:\n      interval: weekly\n  - package-ecosystem: terraform\n    directory: "/4j_Real_life_example"\n    schedule:\n      interval: weekly\n  - package-ecosystem: github-actions\n    directory: "/"\n    schedule:\n      interval: weekly\n
+version: 2
+updates:
+  - package-ecosystem: terraform
+    directory: "/4g_RDS"
+    schedule:
+      interval: weekly
+  - package-ecosystem: terraform
+    directory: "/4j_Real_life_example"
+    schedule:
+      interval: weekly
+  - package-ecosystem: github-actions
+    directory: "/"
+    schedule:
+      interval: weekly
