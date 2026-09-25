@@ -1,1 +1,7 @@
-# Security Policy\n\n## Reporting a vulnerability\n\nPlease report suspected security vulnerabilities privately using GitHub's **Report a vulnerability** feature in this repository's Security tab. Do not disclose credentials or vulnerability details in a public issue or pull request.\n\nIf private vulnerability reporting is unavailable, contact the repository owner through their GitHub profile and request a private channel. Include the affected file or component, impact, and safe reproduction steps.\n
+# Security Policy
+
+## Reporting a vulnerability
+
+Please report suspected security vulnerabilities privately using GitHub's **Report a vulnerability** feature in this repository's Security tab. Do not disclose credentials or vulnerability details in a public issue or pull request.
+
+If private vulnerability reporting is unavailable, contact the repository owner through their GitHub profile and request a private channel. Include the affected file or component, impact, and safe reproduction steps.
