@@ -1,4 +1,10 @@
-variable "db_password" {\n  description = "RDS master password. Supply through TF_VAR_db_password or a secret manager."\n  type        = string\n  sensitive   = true\n}\n\nprovider "aws" {
+variable "db_password" {
+  description = "RDS master password. Supply through TF_VAR_db_password or a secret manager."
+  type        = string
+  sensitive   = true
+}
+
+provider "aws" {
   region = "eu-west-1"
 }
 
