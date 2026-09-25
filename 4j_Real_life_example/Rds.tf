@@ -1,4 +1,4 @@
-resource "aws_security_group" "allow_sql" {
+variable "db_password" {\n  description = "RDS master password. Supply through TF_VAR_db_password or a secret manager."\n  type        = string\n  sensitive   = true\n}\n\nresource "aws_security_group" "allow_sql" {
   name        = "allow_sql"
   description = "Allow inbound traffic"
   vpc_id      = "${module.vpc.vpc_id}"
@@ -36,7 +36,7 @@ module "db" {
   # kms_key_id        = "arm:aws:kms:<region>:<accound id>:key/<kms key id>"
   name     = "demodb"
   username = "user"
-  password = "YourPwdShouldBeLongAndSecure!"
+  password = var.db_password
   port     = "3306"
 
   vpc_security_group_ids = ["${aws_security_group.allow_sql.id}"]
