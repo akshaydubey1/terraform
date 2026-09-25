@@ -1,3 +1,15 @@
 .terraform
 *.tfstate*
 tmp/
+# Local environment secrets and Terraform inputs/state
+.env
+.env.*
+!.env.example
+*.tfvars
+*.tfvars.json
+!*.tfvars.example
+**/.terraform/
+*.tfstate
+*.tfstate.*
+crash.log
+crash.*.log

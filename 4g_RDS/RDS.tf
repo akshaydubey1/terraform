@@ -1,3 +1,9 @@
+variable "db_password" {
+  description = "RDS master password. Supply through TF_VAR_db_password or a secret manager."
+  type        = string
+  sensitive   = true
+}
+
 provider "aws" {
   region = "eu-west-1"
 }
@@ -36,7 +42,7 @@ module "db" {
   # kms_key_id        = "arm:aws:kms:<region>:<accound id>:key/<kms key id>"
   name     = "demodb"
   username = "user"
-  password = "YourPwdShouldBeLongAndSecure!"
+  password = var.db_password
   port     = "3306"
 
   vpc_security_group_ids = ["${data.aws_security_group.default.id}"]
